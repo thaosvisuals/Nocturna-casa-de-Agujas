@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-label="Piercings circulares estilo barbell en tinta negra">
+  <rect width="320" height="220" fill="#e6e6e6"/>
+  <g fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M42 142c0-52 42-94 94-94s94 42 94 94" stroke-width="5.5"/>
+    <path d="M60 142c0-42 34-76 76-76s76 34 76 76" stroke-width="2.8"/>
+    <circle cx="74" cy="150" r="16" fill="#f4f4f4" stroke-width="3.5"/>
+    <circle cx="198" cy="150" r="16" fill="#f4f4f4" stroke-width="3.5"/>
+  </g>
+  <g fill="none" stroke="#1e1e1e" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M178 152c0-44 36-80 80-80s80 36 80 80" stroke-width="5.5"/>
+    <path d="M194 152c0-35 29-64 64-64s64 29 64 64" stroke-width="2.6"/>
+    <circle cx="204" cy="159" r="11" fill="#2a2a2a" stroke-width="3.4"/>
+    <circle cx="312" cy="159" r="11" fill="#2a2a2a" stroke-width="3.4"/>
+  </g>
+  <g stroke="#b9b9b9" stroke-width="1">
+    <line x1="0" y1="26" x2="320" y2="26"/>
+    <line x1="0" y1="194" x2="320" y2="194"/>
+  </g>
+</svg>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nocturna Casa de Agujas es una landing page de ejemplo para una marca ficticia de piercings, con una estética editorial grunge, fotocopiada y oscura.">
+    <title>Nocturna Casa de Agujas</title>
+    <script>document.documentElement.classList.add("js-ready");</script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+    <style>
+      .thaos-return-button {
+        position: fixed;
+        right: clamp(0.7rem, 2.5vw, 1.2rem);
+        bottom: calc(clamp(0.7rem, 2.5vw, 1.2rem) + env(safe-area-inset-bottom, 0px));
+        z-index: 2147483647;
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        min-width: 4.6rem;
+        min-height: 2.4rem;
+        padding: 0.52rem 0.88rem;
+        border: 1px solid rgba(165, 138, 77, 0.68);
+        background: #050505;
+        color: #ffffff;
+        font: 600 0.78rem/1.1 inherit;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        text-decoration: none;
+        box-shadow: 0 10px 22px rgba(0, 0, 0, 0.32);
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none;
+        transition: border-color 220ms ease, transform 220ms ease, background-color 220ms ease;
+      }
+
+      .thaos-return-button:hover,
+      .thaos-return-button:focus-visible {
+        border-color: rgba(191, 160, 92, 0.9);
+        background: #0a0a0a;
+        transform: translate3d(0, -1px, 0);
+      }
+
+      .thaos-return-button:focus-visible {
+        outline: 2px solid rgba(255, 255, 255, 0.72);
+        outline-offset: 3px;
+      }
+
+      @keyframes thaos-return-in {
+        to {
+          opacity: 1;
+          transform: translate3d(0, 0, 0);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .thaos-return-button {
+          animation: none;
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
+      }
+    </style>
+</head>
+<body>
+    <a class="thaos-return-button" href="https://thaosvisuals.github.io/Thaos-Webs/" aria-label="Volver al portfolio principal de THAOS Webs">Volver</a>
+    <svg class="filter-defs" aria-hidden="true" focusable="false" width="0" height="0">
+        <defs>
+            <filter id="xerox-roughness">
+                <feTurbulence type="fractalNoise" baseFrequency="0.95" numOctaves="2" seed="8" result="noise"></feTurbulence>
+                <feColorMatrix in="noise" type="saturate" values="0" result="monoNoise"></feColorMatrix>
+                <feComponentTransfer in="monoNoise" result="posterNoise">
+                    <feFuncR type="discrete" tableValues="0 0.1 0.95 1"></feFuncR>
+                    <feFuncG type="discrete" tableValues="0 0.1 0.95 1"></feFuncG>
+                    <feFuncB type="discrete" tableValues="0 0.1 0.95 1"></feFuncB>
+                </feComponentTransfer>
+                <feDisplacementMap in="SourceGraphic" in2="posterNoise" scale="8" xChannelSelector="R" yChannelSelector="B"></feDisplacementMap>
+            </filter>
+            <filter id="ink-bleed">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="1.6" result="blur"></feGaussianBlur>
+                <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0
+                                                             0 1 0 0 0
+                                                             0 0 1 0 0
+                                                             0 0 0 18 -7" result="spread"></feColorMatrix>
+                <feBlend in="SourceGraphic" in2="spread" mode="multiply"></feBlend>
+            </filter>
+        </defs>
+    </svg>
+
+    <div class="page-texture" aria-hidden="true">
+        <span class="texture-layer texture-noise"></span>
+        <span class="texture-layer texture-grain"></span>
+        <span class="texture-layer texture-wrinkles"></span>
+        <span class="texture-layer texture-copy"></span>
+        <span class="texture-layer texture-collage texture-collage-a"></span>
+        <span class="texture-layer texture-collage texture-collage-b"></span>
+        <span class="texture-layer texture-tears texture-tears-top"></span>
+        <span class="texture-layer texture-tears texture-tears-bottom"></span>
+    </div>
+
+    <header class="site-header" id="top">
+        <a class="brand" href="#top" aria-label="Inicio de Nocturna Casa de Agujas">
+            <span class="brand-mark">NOCTURNA</span>
+            <span class="brand-sub">archivo privado / liturgia sonora / acceso restringido</span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir navegación">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="Principal">
+            <a href="#manifesto">Manifiesto</a>
+            <a href="#collage">Fragmentos</a>
+            <a href="#symbols">Sigilos</a>
+            <a href="#summary">Resumen</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero section" aria-labelledby="hero-title">
+            <div class="hero-copy" data-reveal>
+                <p class="section-tag">liturgia xerox / sombra impresa / ruido en movimiento</p>
+                <h1 id="hero-title">Toda aguja abre un portal en la sombra.</h1>
+                <p class="hero-intro">
+                    Una landing page de ejemplo para un estudio de piercing ficticio, tratada como panfleto ritual: tipografía ceremonial, papel herido,
+                    fotocopias superpuestas y símbolos que parecen salir de un grimorio reimpreso mil veces.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#manifesto">Abrir manifiesto</a>
+                    <a class="button button-secondary" href="#collage">Examinar archivo</a>
+                </div>
+
+                <ul class="hero-meta" aria-label="Puntos destacados del estudio">
+                    <li>landing de ejemplo</li>
+                    <li>archivo sellado</li>
+                    <li>culto subterráneo</li>
+                    <li>ruido xerox vivo</li>
+                    <li>grimorio digital</li>
+                </ul>
+            </div>
+
+            <div class="hero-collage" aria-hidden="true">
+                <article class="poster poster-main" data-reveal data-jitter>
+                    <p class="poster-kicker">ritual 01 / copia maestra</p>
+                    <h2>RITO NEGRO</h2>
+                    <p>hierro, tinta, presión y una ceremonia breve contra la piel.</p>
+                    <div class="poster-stamp">impreso / velado / consagrado</div>
+                </article>
+
+                <article class="poster poster-note" data-reveal data-jitter>
+                    <p class="poster-kicker">nota marginal</p>
+                    <p>
+                        Ninguna línea debería verse limpia. Ningún bloque tendría que quedarse quieto. El diseño tiene que sentirse encontrado en una pared húmeda.
+                    </p>
+                </article>
+
+                <article class="poster poster-sigil" data-reveal data-jitter>
+                    <div class="sigil">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <p>ojo / cruz / órbita / acero</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section manifesto" id="manifesto">
+            <div class="section-heading" data-reveal>
+                <p class="section-tag">manifiesto de la casa</p>
+                <h2>Un artículo breve, impreso con rabia y doblado en cuatro.</h2>
+            </div>
+
+            <div class="manifesto-grid">
+                <article class="paper-card manifesto-article" data-reveal data-jitter>
+                    <p class="quote-mark">[ artículo / zine / página arrancada ]</p>
+                    <h3>La liturgia visual no debe sentirse digital. Debe sentirse manipulada.</h3>
+                    <div class="manifesto-columns">
+                        <p class="manifesto-lead">
+                            Nocturna se presenta como si la hubieran compuesto entre tijeras, cinta, tóner y superstición. El blanco nunca es puro. El negro nunca descansa.
+                        </p>
+                        <p>
+                            Cada bloque editorial se apoya en una grilla rota, con márgenes falsos, rotaciones mínimas y paneles que se pisan entre sí como si fueran recortes pegados de madrugada. Acá no se busca simetría impecable.
+                        </p>
+                        <p>
+                            El resultado tiene que sentirse como una mezcla de fanzine, afiche ceremonial y página de grimorio moderno: brutal, ceremonial, fotocopiado, lleno de huellas y, aun así, legible.
+                        </p>
+                    </div>
+                </article>
+
+                <aside class="paper-card detail-card manifesto-note" data-reveal>
+                    <p class="detail-label">anotación al margen</p>
+                    <p class="margin-note">La interfaz se lee como un recorte recuperado de un archivo clandestino: ceremonial, tangible, incómodo y deliberadamente imperfecto. Todo se siente hecho a mano.</p>
+                    <ul class="detail-list">
+                        <li>titulares de peso litúrgico</li>
+                        <li>capas impresas una sobre otra</li>
+                        <li>marcas, pliegues y ruido vivo</li>
+                        <li>estática pura / sin dependencias</li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+
+        <section class="section selection collage" id="collage">
+            <div class="section-heading" data-reveal>
+                <p class="section-tag">collage visual</p>
+                <h2>Fragmentos monocromos arrancados de una pared ritual.</h2>
+            </div>
+
+            <div class="collage-grid">
+                <figure class="collage-fragment fragment-wide" data-reveal data-jitter>
+                    <div class="fragment-media media-portrait">
+                        <svg class="fragment-svg" viewBox="0 0 320 220" aria-hidden="true">
+                            <rect x="14" y="12" width="292" height="196" rx="8"></rect>
+                            <circle cx="164" cy="92" r="42"></circle>
+                            <path d="M94 194C101 145 129 127 164 127C198 127 229 145 236 194"></path>
+                            <line x1="36" y1="38" x2="284" y2="38"></line>
+                            <line x1="48" y1="174" x2="275" y2="174"></line>
+                        </svg>
+                    </div>
+                    <figcaption>placa 01 / retrato velado / tóner derramado</figcaption>
+                </figure>
+
+                <figure class="collage-fragment fragment-tall" data-reveal data-jitter>
+                    <div class="fragment-media media-photo">
+                        <img class="fragment-img" src="assets/img/barbell-sheet-ink.svg" width="260" height="300" loading="lazy" decoding="async" alt="Ilustracion monocroma de varios piercings tipo barbell en composicion editorial.">
+                    </div>
+                    <figcaption>placa 02 / barbell circular / metal en sombra</figcaption>
+                </figure>
+
+                <figure class="collage-fragment" data-reveal data-jitter>
+                    <div class="fragment-media media-eye">
+                        <svg class="fragment-svg" viewBox="0 0 220 220" aria-hidden="true">
+                            <ellipse cx="110" cy="110" rx="78" ry="44"></ellipse>
+                            <circle cx="110" cy="110" r="26"></circle>
+                            <circle cx="110" cy="110" r="8"></circle>
+                            <line x1="110" y1="20" x2="110" y2="54"></line>
+                            <line x1="110" y1="166" x2="110" y2="200"></line>
+                            <line x1="26" y1="110" x2="58" y2="110"></line>
+                            <line x1="162" y1="110" x2="194" y2="110"></line>
+                        </svg>
+                    </div>
+                    <figcaption>placa 03 / ojo mecánico / mirada sellada</figcaption>
+                </figure>
+
+                <figure class="collage-fragment fragment-wide" data-reveal data-jitter>
+                    <div class="fragment-media media-photo">
+                        <img class="fragment-img" src="assets/img/barbell-circular-ink.svg" width="320" height="220" loading="lazy" decoding="async" alt="Ilustracion monocroma de piercings circulares tipo barbell en fondo claro.">
+                    </div>
+                    <figcaption>placa 04 / foto de producto / blanco y negro</figcaption>
+                </figure>
+
+                <figure class="collage-fragment" data-reveal data-jitter>
+                    <div class="fragment-media media-crescent">
+                        <svg class="fragment-svg" viewBox="0 0 220 220" aria-hidden="true">
+                            <circle cx="110" cy="110" r="68"></circle>
+                            <circle cx="138" cy="96" r="60" class="cutout"></circle>
+                            <polygon points="110,32 118,56 144,56 123,71 130,95 110,80 90,95 97,71 76,56 102,56"></polygon>
+                        </svg>
+                    </div>
+                    <figcaption>placa 05 / luna impresa / estrella torcida</figcaption>
+                </figure>
+            </div>
+
+            <p class="collage-disclaimer" data-reveal>
+                Nota: estas imágenes son ejemplos mal hechos a propósito. No están pensadas para estética final, sino para mostrar: "ahí puedo poner tu producto".
+            </p>
+        </section>
+
+        <section class="section archive symbols" id="symbols">
+            <div class="section-heading" data-reveal>
+                <p class="section-tag">elementos simbólicos</p>
+                <h2>Geometrías arcanas, ojos, cruces y órbitas en tinta negra.</h2>
+            </div>
+
+            <div class="symbols-layout">
+                <article class="paper-card symbol-board" data-reveal>
+                    <p class="panel-label">diagrama / órbita / invocación</p>
+                    <svg class="occult-diagram" viewBox="0 0 520 520" role="img" aria-label="Diagrama oculto con ojo, círculos, estrella y cruces">
+                        <circle cx="260" cy="260" r="196"></circle>
+                        <circle cx="260" cy="260" r="146"></circle>
+                        <circle cx="260" cy="260" r="96"></circle>
+                        <line x1="260" y1="34" x2="260" y2="486"></line>
+                        <line x1="34" y1="260" x2="486" y2="260"></line>
+                        <line x1="104" y1="104" x2="416" y2="416"></line>
+                        <line x1="416" y1="104" x2="104" y2="416"></line>
+                        <polygon points="260,92 292,196 402,196 312,260 346,370 260,304 174,370 208,260 118,196 228,196"></polygon>
+                        <ellipse cx="260" cy="260" rx="94" ry="52"></ellipse>
+                        <circle cx="260" cy="260" r="28"></circle>
+                        <circle cx="260" cy="260" r="8"></circle>
+                        <g class="diagram-crosses">
+                            <path d="M260 18v34M243 35h34"></path>
+                            <path d="M260 468v34M243 485h34"></path>
+                            <path d="M18 260h34M35 243v34"></path>
+                            <path d="M468 260h34M485 243v34"></path>
+                        </g>
+                    </svg>
+                </article>
+
+                <div class="symbols-notes">
+                    <article class="archive-panel symbol-note" data-reveal data-jitter>
+                        <p class="panel-label">símbolos activos</p>
+                        <ul class="stamp-list">
+                            <li>círculos concéntricos</li>
+                            <li>ojo vigilante</li>
+                            <li>estrella torcida</li>
+                            <li>cruces de registro</li>
+                        </ul>
+                    </article>
+
+                    <article class="archive-panel inverted symbol-note" data-reveal>
+                        <p class="panel-label">lectura</p>
+                        <p>Estos signos no explican nada del todo. Solo empujan la atmósfera: archivo secreto, liturgia gráfica y una precisión que parece superstición.</p>
+                    </article>
+
+                    <article class="archive-panel symbol-note symbol-mini-grid" data-reveal data-jitter>
+                        <p class="panel-label">señalamiento</p>
+                        <div class="symbol-chip-row">
+                            <span class="symbol-chip">ojo</span>
+                            <span class="symbol-chip">cruz</span>
+                            <span class="symbol-chip">órbita</span>
+                            <span class="symbol-chip">sello</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section summary" id="summary">
+            <div class="section-heading" data-reveal>
+                <p class="section-tag">resumen de la página</p>
+                <h2>Una landing page de ejemplo que mezcla archivo secreto, collage analógico y presentación editorial.</h2>
+            </div>
+
+            <div class="manifesto-grid summary-grid">
+                <article class="paper-card summary-card" data-reveal>
+                    <p class="quote-mark">[ resumen / demo / landing ]</p>
+                    <h3>Esta página funciona como una muestra visual estática para presentar una marca ficticia con una identidad oscura y ritual.</h3>
+                    <div class="manifesto-columns">
+                        <p class="manifesto-lead">
+                            El sitio combina una portada dramática, un manifiesto tipo zine, un collage monocromo y un tablero simbólico para mostrar una dirección visual fuerte.
+                        </p>
+                        <p>
+                            Todo está construido con HTML, CSS y JavaScript vanilla, sin dependencias externas, con estructura adaptable y funcionamiento offline.
+                        </p>
+                    </div>
+                </article>
+
+                <aside class="archive-panel summary-panel" data-reveal data-jitter>
+                    <p class="panel-label">en breve</p>
+                    <ul class="detail-list">
+                        <li>landing page de ejemplo para una marca ficticia</li>
+                        <li>estética grunge, xerox, punk y esotérica</li>
+                        <li>texturas impresas, collage roto y símbolos ocultos</li>
+                        <li>sitio rápido, adaptable y sin librerías</li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>expediente nocturna / landing de ejemplo / <span id="current-year"></span></p>
+        <a href="#top" data-go-back>retornar</a>
+    </footer>
+</body>
+</html>
